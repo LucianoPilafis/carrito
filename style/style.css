@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,400;1,700&family=Mouse+Memoirs&display=swap");
+header {
+  background-color: rgb(223, 189, 108);
+}
+header .navbar-brand {
+  font-family: "Mouse Memoirs", sans-serif;
+  font-size: 2.1rem;
+}
+header .nav-link {
+  font-size: 1.3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+header .nav-link, header .navbar-brand {
+  color: #594a4e;
+  transition: all 1s;
+}
+header .nav-link:hover {
+  transform: scale(1.1);
+  color: #faeee7;
+}
+header .navbar-brand:hover {
+  transform: scale(1.1);
+  color: #faeee7;
+}
+header .navbar-toggler {
+  background-color: #faeee7;
+  transition: all 1s;
+}
+header .navbar-toggler:hover {
+  background-color: #594a4e;
+  transform: scale(1.1);
+}
+
+a {
+  text-decoration: none;
+  color: #faeee7;
+}
+
+.boton--, .boton--contacto, .boton--nosotros, .boton--tecnicas, .boton--muestrario {
+  height: 17vh;
+  width: 24vw;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #594a4e;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  border: 2px solid #594a4e;
+  background-image: url(../imagenes/muestra-05.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: all 1s;
+}
+@media (min-width: 768px) {
+  .boton--, .boton--contacto, .boton--nosotros, .boton--tecnicas, .boton--muestrario {
+    font-size: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .boton--, .boton--contacto, .boton--nosotros, .boton--tecnicas, .boton--muestrario {
+    font-size: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .boton--, .boton--contacto, .boton--nosotros, .boton--tecnicas, .boton--muestrario {
+    font-size: 30px;
+  }
+  .boton--:hover, .boton--contacto:hover, .boton--nosotros:hover, .boton--tecnicas:hover, .boton--muestrario:hover {
+    font-size: 32px;
+  }
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.parrafo {
+  background-color: rgba(223, 189, 108, 0.67);
+  color: #594a4e;
+  font-size: 1.5rem;
+}
+.parrafo a {
+  text-decoration: none;
+  color: #faeee7;
+}
+
+body {
+  background-color: #faeee7;
+  background-image: url(../imagenes/fondo2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  font-style: bold;
+  font-weight: 700;
+}
+
+.coloreo {
+  background-color: rgb(223, 189, 108);
+  color: #faeee7;
+}
+.coloreo a {
+  color: #faeee7;
+  text-decoration: none;
+}
+.coloreo p {
+  margin: 0;
+  padding: 0;
+}
+
+.muestra {
+  transition: all 1s;
+}
+.muestra:hover {
+  transform: scale(1.1);
+  border: 2px solid #a38a7b;
+  background-color: #594a4e;
+  color: #faeee7;
+}
+
+.contactlist {
+  padding: 0;
+  margin: 0;
+}
+.contactlist li {
+  list-style: none;
+  margin: 5% 0 3% 0;
+  padding: 0;
+}
+.contactlist li a {
+  color: #594a4e;
+}
+.contactlist li .plista {
+  font-size: 18px;
+}
+@media (min-width: 576px) {
+  .contactlist li .plista {
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .contactlist li .plista {
+    font-size: 22px;
+  }
+}
+@media (min-width: 992px) {
+  .contactlist li .plista {
+    font-size: 1.5rem;
+  }
+}
+
+.iconocontacto {
+  width: 24px;
+  height: 24px;
+  margin: 2%;
+}
+
+.formulario {
+  margin: 8% 0 2% 0;
+}
+
+.contactoparrafo {
+  border: 2px solid #594a4e;
+  margin: 0 10% 0 10%;
+}
+
+.boton {
+  background-color: #594a4e;
+  color: rgb(223, 189, 108);
+  border-radius: 15%;
+  margin: 5% 0 5% 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,10 @@
+.muestra{
+    transition: all 1s;
+    &:hover{
+
+        transform: scale(1.1);
+        border: 2px solid #a38a7b;
+        background-color: $letra;
+        color: $coloreo;
+    }
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagenes/logo2.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <meta name="description" content="Contamos con mas de 30 colores al mejor precio del mercado.">
+    <meta name="author" content="Luciano Pilafis">
+    <meta name="copyright" content="Engobes Patagónicos">
+    <meta property="og:title" content="Muestrario">
+    <meta property="og:site_name" content="Engobes Patagónicos">
+    <meta property="og:url" content="https://engobespatagonicos.netlify.app/sections/muestrario.html">
+    <meta property="og:description" content="Nuestra muestra de 30 colores diferentes.">
+    <meta property="og:type" content="product">
+    <meta property="og:image" content="https://engobespatagonicos.netlify.app/imagenes/muestra7.jpeg">
+    <title>Muestrario</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">
+                   <h1>Engobes Patagónicos</h1> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class=" collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="./muestrario.html" class="nav-link">Muestrario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./tecnicas.html" class="nav-link">Técnicas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./nosotros.html" class="nav-link">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contacto.html" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container-fluid">
+            <div
+                class="row offset-sm-2 col-sm-8 offset-sm-2 offset-md-3 col-md-6 offset-md-3 offset-lg-3 col-lg-6 offset-lg-3 offset-xl-3 col-xl-6 offset-xl-3 my-2">
+                <div class="parrafo text-center">
+                    <h2 class="my-4">Muestrario</h2>
+                    <h3 class="my-4">¿Qué son los engobes?</h3>
+                    <p>El engobe cerámico es un recubrimiento decorativo a base de arcilla, óxidos
+                        y pigmentos los cuales le dan color. La particularidad de los engobes Patagónicos es que se
+                        pueden aplicar en cualquier estado de la pieza, es decir, se aplican tanto en estado de cuero o
+                        cruda, seca o bizcochada. Contamos con una amplia gama de colores, los cuales pueden ver a
+                        continuación.
+                    </p>
+                    <div class="container-fluid">
+                        <h4 class="my-5">Carrito</h4>
+                        <div class="row my-3" id="carrito">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Acción</th>
+                                    <th scope="col">Total</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="products"></tbody>
+                                <tfoot>
+                                  <tr id="footer">
+                                    <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                                  </tr>
+                                </tfoot>
+                              </table>
+
+                        </div>
+                        <template id="template-carrito">
+                            <tr>
+                                <th scope="row">id</th>
+                                <td>Café</td>
+                                <td>1</td>
+                                <td>
+                                    <button class="btn btn-info btn-sm">
+                                        +
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        -
+                                    </button>
+                                </td>
+                                <td>$ <span>500</span></td>
+                              </tr>
+                        </template>
+                        <template id="template-footer">
+                            <th scope="row" colspan="2">Total productos</th>
+                            <td>10</td>
+                            <td>
+                                <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                                    vaciar todo
+                                </button>
+                            </td>
+                            <td class="font-weight-bold">$ <span>5000</span></td>
+                        </template>
+                          
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center p-3" id="contenedor">
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/verdeIntenso.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color">
+                    <p class="color" id="1">Verde intenso</p>
+                    <p class="precio">950</p>
+                    <button class="boton" id="verdeIntenso">Agregar</button>
+                </article>
+                <article  class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/verdeCromo.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color verde cromo">
+                    <p class="color" id="2">Verde cromo</p>
+                    <p class="precio">650</p>
+                    <button class="boton" id="verdeCromo">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/verdeFresco.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color verde">
+                    <p class="color" id="3">Verde fresco</p>
+                    <p class="precio">550</p>
+                    <button class="boton" id="verdeFresco">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/verdeManzana.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color verde manzana">
+                    <p class="color" id="4">Verde manzana</p>
+                    <p class="precio">450</p>
+                    <button class="boton" id="verdeManzana">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/verdeAgua.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color verde agua">
+                    <p class="color" id="5">Verde agua</p>
+                    <p class="precio">600</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/celeste.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color celeste">
+                    <p class="color" id="6">Celeste</p>
+                    <p class="precio">700</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/cielo.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color cielo">
+                    <p class="color" id="7">Cielo</p>
+                    <p class="precio">750</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/turquesa.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color turquesa">
+                    <p class="color" id="8">Turquesa</p>
+                    <p class="precio">850</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/azul.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color azul">
+                    <p class="color" id="9">Azul</p>
+                    <p class="precio">650</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/azulIntenso.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color azul intenso">
+                    <p class="color" id="10">Azul intenso</p>
+                    <p class="precio">350</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/azulCobalto.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color azul cobalto">
+                    <p class="color" id="11">Azul cobalto</p>
+                    <p class="precio">550</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/berenjena.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color berenjena">
+                    <p class="color" id="12">Berenjena</p>
+                    <p class="precio">350</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/lila.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color lila">
+                    <p class="color" id="13">Lila</p>
+                    <p class="precio">650</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/violeta.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color violeta">
+                    <p class="color" id="14">Violeta</p>
+                    <p class="precio">850</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/rojo.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color rojo">
+                    <p class="color" id="15">Rojo</p>
+                    <p class="precio">900</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/coral.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de corlor coral">
+                    <p class="color" id="16">Coral</p>
+                    <p class="precio">350</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/rosado.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color rosado">
+                    <p class="color" id="17">Rosado</p>
+                    <p class="precio">450</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/rosaPastel.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color rosa pastel">
+                    <p class="color" id="18">Rosa pastel</p>
+                    <p class="precio">550</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/salmon.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color salmon">
+                    <p class="color" id="19">Salmon</p>
+                    <p class="precio">350</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/amarillo.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color amarillo">
+                    <p class="color" id="20">Amarillo</p>
+                    <p class="precio">350</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/amarillolimon.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color amarillo limon">
+                    <p class="color" id="21">Amarillo Limón</p>
+                    <p class="precio">350</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/naranja.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color naranja">
+                    <p class="color" id="22">Naranja</p>
+                    <p class="precio">350</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/marron.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color marron">
+                    <p class="color" id="23">Marron</p>
+                    <p class="precio">850</p>
+
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/crema.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color crema">
+                    <p class="color" id="24">Crema</p>
+                    <p class="precio">350</p>
+                    <button class="boton">Agregar</button>
+                </article>                                          
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/gris.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color gris">
+                    <p class="color" id="25">Gris</p>
+                    <p class="precio">350</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/grisSuave.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color gris Suave">
+                    <p class="color" id="26">Gris suave</p>
+                    <p class="precio">400</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/blanco.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color blanco">
+                    <p class="color" id="27">Blanco</p>
+                    <p class="precio">800</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/negro.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color negro">
+                    <p class="color" id="28">Negro</p>
+                    <p class="precio">520</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/ocre.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color ocre">
+                    <p class="color" id="29">Ocre</p>
+                    <p class="precio">600</p>
+                    <button class="boton">Agregar</button>
+                </article>
+                <article class="col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 d-flex flex-column align-items-center muestra">
+                    <img src="../imagenes/muestrario/terracota.jpeg" loading="lazy" class="img-fluid p-2"
+                        alt="portasahumerio de color terracota">
+                    <p class="color" id="30">Terracota</p>
+                    <p class="precio">750</p>
+                    <button class="boton">Agregar</button>
+                </article>    
+            </div>
+        </section>
+    </main>
+    <footer class="coloreo text-center">
+        <a href="https://www.instagram.com/engobes.patagonicos/"  target="_blank">
+            <img class="icono" src="https://img.icons8.com/material-outlined/24/000000/instagram-new--v1.png">
+            Engobes.patagonicos
+        </a>
+        <p>Todos los derechos reservados a Engobes Patagónicos.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="../app.js"></script>
+</body>
+
+</html>

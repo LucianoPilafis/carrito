@@ -1,0 +1,34 @@
+header{
+    background-color: $header;
+
+    .navbar-brand{
+        font-family: 'Mouse Memoirs', sans-serif;
+        font-size: 2.1rem;
+        
+    }
+    .nav-link{
+        font-size: 1.3rem;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+    }
+    .nav-link, .navbar-brand{
+        color: $letra;
+        transition: all 1s;
+    }
+    .nav-link:hover{
+        transform: scale(1.1);
+        color: $coloreo;
+    }
+    .navbar-brand:hover{
+        transform: scale(1.1);
+        color: $coloreo;
+    }
+    .navbar-toggler{
+        background-color: $coloreo;
+        transition: all 1s;
+    }
+    .navbar-toggler:hover{
+        background-color: $letra;
+        transform: scale(1.1);
+    }
+}
