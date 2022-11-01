@@ -38,7 +38,7 @@ const addCarrito = e => {
 }
 
 const setCarrito = objeto =>{
-    
+
     const producto = {
         id: objeto.querySelector('.color').id,
         nombre: objeto.querySelector('.color').innerHTML,
@@ -48,19 +48,18 @@ const setCarrito = objeto =>{
     if(carro.hasOwnProperty(producto.id)){
         producto.cantidad = carro[producto.id].cantidad + 1
     }
-    
     carro[producto.id] = {...producto}
+
     pintarCarrito()
     
 }
 
-
-
 const pintarCarrito = () => {
     products.innerHTML=''
     Object.values(carro).forEach(producto => {
-        if(producto.cantidad == 0){
-            delete carro.producto
+        if(producto.cantidad === 0){
+
+            
             return
         }
         templateCarro.querySelector('th').textContent = producto.id
@@ -73,9 +72,7 @@ const pintarCarrito = () => {
         const clone = templateCarro.cloneNode(true)
         fragment.appendChild(clone)
         
-
     })
-
     
     products.appendChild(fragment);
     pintarFooter();
@@ -106,20 +103,24 @@ const pintarFooter = () => {
 }
 
 const btnAccion = e => {
-    let carrote =  Object.values(carro)
     if(e.target.classList.contains('btn-info')){
-        carrote.forEach( element =>{if(e.target.dataset.id === element.id) {
-            element.cantidad ++;
-            pintarCarrito()
+        console.log(carro[e.target.dataset.id])
+        const producto = carro[e.target.dataset.id];
+        producto.cantidad++ 
+        carro[e.target.dataset.id] = {...producto}
+        pintarCarrito()
 
-    } })
-    }else if(e.target.classList.contains('btn-danger')){
-        carrote.forEach( element =>{if(e.target.dataset.id === element.id) {
-            element.cantidad --;
-            pintarCarrito()
-            if (element.cantidad === 0){
-                pintarCarrito()
-            }
-        }})
+
     }
+    if(e.target.classList.contains('btn-danger')){
+        const producto = carro[e.target.dataset.id]
+        producto.cantidad--
+        if(producto.cantidad === 0){
+            delete carro[e.target.dataset.id]
+        }
+        pintarCarrito()
+        
+       
+    }
+    e.stopPropagation()
 }
